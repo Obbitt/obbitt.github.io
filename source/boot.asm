@@ -101,7 +101,7 @@ Print:
 
 ; Strings
 W:
-    db 'Obbitt OS v0.3                                                                  ', 0
+    db 'Obbitt OS v0.3 (beta)                                                           ', 0
 OI:
     db 'Obbitt is a free, open-source operating system maintained by the Obbitt Team    ', 0
 S:
