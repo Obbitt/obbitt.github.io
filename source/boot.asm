@@ -4,20 +4,20 @@ org 0x7c00
 mov bp, 0x7c00
 mov sp, bp
 
-mov ax, 0600h
-mov bh, 4fh
-mov cx, 0000h
-mov dx, 184fh
-int 10h
-
-mov ax, 0600h
-mov bh, 3fh
-mov cx, 0100h
-mov dx, 184fh
-int 10h
-
-; Call the starting strings
+; Call the starting functions
 Start:
+    mov ax, 0600h
+    mov bh, 4fh
+    mov cx, 0000h
+    mov dx, 184fh
+    int 10h
+
+    mov ax, 0600h
+    mov bh, 3fh
+    mov cx, 0100h
+    mov dx, 184fh
+    int 10h
+    
     mov bx, W
     call Print
 
@@ -37,6 +37,9 @@ KeyLoop:
 
     cmp al, 'i'
     je .IN
+
+    cmp al, 'c'
+    je .CLS
 
     jmp KeyLoop
 
@@ -72,6 +75,15 @@ KeyLoop:
         call Print
 
         jmp KeyLoop
+    
+    .CLS:
+        pusha
+        mov ah, 0x00
+        mov al, 0x03
+        int 0x10
+        popa
+
+        jmp Start
 
 jmp $
 
