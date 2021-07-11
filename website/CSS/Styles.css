@@ -1,0 +1,25 @@
+body {
+    background-image: url('../Images/bg.jpg');
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+button {
+    padding: 1cm;
+    font-size: 0.5cm;
+    border-radius: 0.5cm;
+    border: none;
+    outline: none;
+    background-color: orange;
+}
+
+button:hover {
+    background-color: rgb(192, 125, 0);
+    box-shadow: 0px 0px 15px orange;
+}
+
+button:active {
+    background-color: rgb(139, 91, 0);
+    box-shadow: 0px 0px 15px rgb(139, 91, 0);;
+}
