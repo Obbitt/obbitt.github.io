@@ -7,7 +7,7 @@ mov sp, bp
 ; Call the starting functions
 Start:
     mov ax, 0600h
-    mov bh, 4fh
+    mov bh, 4ah
     mov cx, 0000h
     mov dx, 184fh
     int 10h
@@ -55,6 +55,8 @@ KeyLoop:
 
         jmp KeyLoop
     
+    ; Commands
+
     .IN:
         mov bx, I
         call Print
@@ -101,15 +103,15 @@ Print:
 
 ; Strings
 W:
-    db 'Obbitt OS v0.3 (beta)                                                           ', 0
+    db '[Obbitt OS v0.4]                                                          [-][X]', 0
 OI:
-    db 'Obbitt is a free, open-source operating system maintained by the Obbitt Team    ', 0
+    db '- Obbitt is an open-source project maintained by the Obbitt Team -              ', 0
 S:
     db '                                                                                ', 0
 CMD:
-    db 'ObbittShell >> ', 0
+    db 'ObbittFunc >> ', 0
 CMDS:
-    db '                                                                ', 0
+    db '                                                                 ', 0
 NCS:
     db ' ', 0
 
