@@ -103,7 +103,7 @@ Print:
 
 ; Strings
 W:
-    db '[Obbitt OS v0.4]                                                          [-][X]', 0
+    db 'Obbitt OS v0.4                                                            [-][X]', 0
 OI:
     db '- Obbitt is an open-source project maintained by the Obbitt Team -              ', 0
 S:
