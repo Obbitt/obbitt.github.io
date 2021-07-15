@@ -1,5 +1,5 @@
 echo Making Image...
-nasm ./source/boot.asm -o .Obbitt.img
+nasm ./source/boot.asm -o ./build/Obbitt.img
 
 echo Done...
 
