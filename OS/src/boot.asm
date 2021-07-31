@@ -17,7 +17,7 @@ Start:
     mov cx, 0100h
     mov dx, 184fh
     int 10h
-    
+
     mov bx, W
     call Print
 
@@ -54,9 +54,8 @@ KeyLoop:
         call Print
 
         jmp KeyLoop
-    
-    ; Commands
 
+    ; Commands
     .IN:
         mov bx, I
         call Print
@@ -77,7 +76,7 @@ KeyLoop:
         call Print
 
         jmp KeyLoop
-    
+
     .CLS:
         pusha
         mov ah, 0x00
